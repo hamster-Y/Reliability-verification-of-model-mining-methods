@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="source0">
+        <name>
+          <text>source0</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="pre_Completed">
+        <name>
+          <text>pre_Completed</text>
+        </name>
+      </place>
+      <place id="pre_Queued">
+        <name>
+          <text>pre_Queued</text>
+        </name>
+      </place>
+      <place id="intplace_Accepted">
+        <name>
+          <text>intplace_Accepted</text>
+        </name>
+      </place>
+      <place id="intplace_Completed">
+        <name>
+          <text>intplace_Completed</text>
+        </name>
+      </place>
+      <place id="intplace_Queued">
+        <name>
+          <text>intplace_Queued</text>
+        </name>
+      </place>
+      <place id="sink0">
+        <name>
+          <text>sink0</text>
+        </name>
+      </place>
+      <place id="pre_Accepted">
+        <name>
+          <text>pre_Accepted</text>
+        </name>
+      </place>
+      <transition id="hid_7">
+        <name>
+          <text>hid_7</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="129a5553-a333-45dc-b54f-8ef29137a072"/>
+      </transition>
+      <transition id="hid_4">
+        <name>
+          <text>hid_4</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="3506adc5-f3a9-42c4-9b2b-11e40c40cb69"/>
+      </transition>
+      <transition id="Queued">
+        <name>
+          <text>Queued</text>
+        </name>
+      </transition>
+      <transition id="Accepted">
+        <name>
+          <text>Accepted</text>
+        </name>
+      </transition>
+      <transition id="hid_18">
+        <name>
+          <text>hid_18</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="ed476a62-5462-4648-b22e-ceb206d6a968"/>
+      </transition>
+      <transition id="hid_15">
+        <name>
+          <text>hid_15</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="6f4a2db0-9191-4f1a-9eed-3a40de23a597"/>
+      </transition>
+      <transition id="hid_12">
+        <name>
+          <text>hid_12</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="f521d03f-7004-4f22-8393-a07d1dfeef68"/>
+      </transition>
+      <transition id="hid_11">
+        <name>
+          <text>hid_11</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="1181d7ac-8896-4282-8ac6-1ad46c07d1f1"/>
+      </transition>
+      <transition id="hid_17">
+        <name>
+          <text>hid_17</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="09b0b2c0-b8bc-4893-b149-62b640ff578d"/>
+      </transition>
+      <transition id="hid_19">
+        <name>
+          <text>hid_19</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="74e832d0-c9fa-433a-a11b-3c2ee0ddba57"/>
+      </transition>
+      <transition id="hid_10">
+        <name>
+          <text>hid_10</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="4708864e-90fd-4acf-9d9b-38f6977a7998"/>
+      </transition>
+      <transition id="Completed">
+        <name>
+          <text>Completed</text>
+        </name>
+      </transition>
+      <transition id="Unmatched">
+        <name>
+          <text>Unmatched</text>
+        </name>
+      </transition>
+      <transition id="hid_14">
+        <name>
+          <text>hid_14</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="15afd691-dbfd-48b0-9941-d67161ef42a3"/>
+      </transition>
+      <transition id="hid_13">
+        <name>
+          <text>hid_13</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="12856657-6e61-4b05-8073-6d5c57aaa42e"/>
+      </transition>
+      <arc id="2119588612864" source="pre_Completed" target="Completed"/>
+      <arc id="2119362733952" source="hid_19" target="pre_Queued"/>
+      <arc id="2118594446840" source="Queued" target="intplace_Queued"/>
+      <arc id="2119362734344" source="hid_12" target="pre_Completed"/>
+      <arc id="2118594448016" source="intplace_Queued" target="hid_19"/>
+      <arc id="2118594447512" source="intplace_Completed" target="hid_17"/>
+      <arc id="2119362732832" source="hid_11" target="pre_Accepted"/>
+      <arc id="2118597249400" source="hid_10" target="pre_Queued"/>
+      <arc id="2118616731432" source="source0" target="hid_4"/>
+      <arc id="2118594447400" source="hid_17" target="sink0"/>
+      <arc id="2118613817776" source="Accepted" target="intplace_Accepted"/>
+      <arc id="2119362734904" source="hid_15" target="pre_Completed"/>
+      <arc id="2118597248952" source="source0" target="hid_10"/>
+      <arc id="2118616730816" source="hid_4" target="pre_Accepted"/>
+      <arc id="2119570435264" source="pre_Queued" target="Queued"/>
+      <arc id="2119586477504" source="intplace_Accepted" target="hid_13"/>
+      <arc id="2118613818056" source="Completed" target="intplace_Completed"/>
+      <arc id="2119362736080" source="hid_18" target="pre_Accepted"/>
+      <arc id="2118613819344" source="intplace_Accepted" target="hid_11"/>
+      <arc id="2119586477392" source="intplace_Accepted" target="hid_14"/>
+      <arc id="2119586479184" source="hid_14" target="sink0"/>
+      <arc id="2119570433640" source="hid_7" target="pre_Completed"/>
+      <arc id="2119362733672" source="Unmatched" target="pre_Accepted"/>
+      <arc id="2119362734568" source="hid_13" target="pre_Queued"/>
+      <arc id="2119570432240" source="source0" target="hid_7"/>
+      <arc id="2119362732272" source="intplace_Completed" target="Unmatched"/>
+      <arc id="2118613819120" source="intplace_Accepted" target="hid_12"/>
+      <arc id="2119586476272" source="intplace_Completed" target="hid_15"/>
+      <arc id="2118594446448" source="intplace_Queued" target="hid_18"/>
+      <arc id="2119588613368" source="pre_Accepted" target="Accepted"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink0">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>
